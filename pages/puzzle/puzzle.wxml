@@ -1,0 +1,23 @@
+<view class="CA-content">
+  <image class='Cbanner' src='http://bolaa.wauwo.net/WXimages/c4.png'></image>
+  <text class='rule'>活动规则</text>
+  <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
+  <view class="boxF">
+    <view class="boxS">
+      <view class="boxT">
+        <view class="boxFF">
+          <view class="boxSS">
+            <view class="boxTT">
+
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text class='tex'>RECOGNIZE \n ENGLISH WORDS</text>
+  <text class='texs'>认单词</text>
+  <text class='texts' decode="{{true}}">
+    一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
+  </text>
+</view>

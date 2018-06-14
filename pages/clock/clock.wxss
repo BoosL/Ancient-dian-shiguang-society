@@ -1,0 +1,219 @@
+@import "../footer-template/footer-template.wxss";
+
+/* 引用模块样式 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item view {
+  height: 100%;
+}
+
+.cbanner {
+  width: 750rpx;
+  height: 100%;
+}
+
+.rule {
+  position: absolute;
+  right: 46rpx;
+  top: 76rpx;
+  width: 92rpx;
+  height: 30rpx;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 22rpx;
+}
+
+.boxF, .boxS, .boxT, .overlay {
+  width: 554rpx;
+  height: 640rpx;
+  overflow: hidden;
+}
+
+.boxF {
+  position: absolute;
+  top: 120rpx;
+  left: 82rpx;
+  transform: rotate(120deg);
+  float: left;
+  margin-left: 10px;
+  -ms-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+}
+
+.boxS {
+  transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+}
+
+.boxT {
+  transform: rotate(-60deg);
+  background: no-repeat 50% center;
+  -ms-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  visibility: visible;
+  background-color: #fff;
+  background-size: 100% 100%;
+}
+
+.boxFF, .boxSS, .boxTT, .overlay {
+  width: 540rpx;
+  height: 620rpx;
+  overflow: hidden;
+}
+
+.boxFF {
+  position: absolute;
+  top: 12rpx;
+  left: -12rpx;
+  transform: rotate(120deg);
+  float: left;
+  margin-left: 10px;
+  -ms-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+}
+
+.boxSS {
+  transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+}
+
+.boxTT {
+  transform: rotate(-60deg);
+  background: no-repeat 50% center;
+  -ms-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  visibility: visible;
+  background-color: #fff;
+  background-size: 100% 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 180rpx;
+  font-size: 78rpx;
+  background: -webkit-linear-gradient(to right, #3e0f98, #d63e4b); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(to right, #3e0f98, #d63e4b); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(to right, #3e0f98, #d63e4b); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #3e0f98, #d63e4b); /* 标准的语法 */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.Interpreter, .judge {
+  font-size: 22rpx;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+  margin-top: 0;
+}
+
+.judge {
+  display: flex;
+  flex-direction: column;
+  margin-left: 116rpx;
+}
+
+.logs {
+  position: absolute;
+  top: 130rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 209rpx;
+  height: 175rpx;
+}
+
+.tex, .texs, .texts {
+  position: absolute;
+  color: #333;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.tex {
+  top: 344rpx;
+  font-size: 44rpx;
+}
+
+.texs {
+  top: 464rpx;
+  font-size: 36rpx;
+}
+
+.texts {
+  font-size: 16rpx;
+  top: 508rpx;
+  font-weight: 600;
+  color: #666;
+}
+
+.lButton, .rButton, .runBtn {
+  position: absolute;
+  bottom: 214rpx;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 29rpx;
+  width: 209rpx;
+  height: 59rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 59rpx;
+}
+
+.lButton {
+  left: 80rpx;
+}
+
+.rButton {
+  right: 80rpx;
+}
+
+.runBtn {
+  left: 269rpx;
+}
+
+.swiper-tab {
+  position: absolute;
+  bottom: 132rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-tab-list {
+  border-radius: 50%;
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #fff;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+
+.on {
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.swiper-box {
+  width: 100%;
+  height: 1130rpx;
+}

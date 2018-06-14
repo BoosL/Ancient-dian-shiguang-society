@@ -1,0 +1,24 @@
+<view class="CA-content">
+  <view class='calendar'>
+    <image class='Cbanner' src='http://bolaa.wauwo.net/WXimages/c1.png'></image>
+    <text class='month'>6月<text class='day'>6日</text></text>
+    <text class='rule'>活动规则</text>
+    <view class='weekB'>
+      <block wx:for="{{array}}">
+        <text class='week'>{{item.message}}</text>
+      </block>
+    </view>
+  </view>
+  <view class='items'>
+    <image src='http://bolaa.wauwo.net/WXimages/c3.png'></image>
+    <text class='itemss' decode="{{true}}">坚持事项 &nbsp;&nbsp;（如：跑步）</text>
+    <text class='time'>2018年6月5日</text>
+    <text class='sign'>已签到</text>
+  </view>
+  <view class='GIFT'>
+    <image src='http://bolaa.wauwo.net/WXimages/c2.png'></image>
+    <text class='GIFTs'>礼品兑换</text>
+    <text class='time'>每周三可集齐***+兑换礼品</text>
+    <text class='convert'>去兑换</text>
+  </view>
+</view>

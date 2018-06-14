@@ -1,0 +1,16 @@
+<template name="postItem">
+  <view class='footer'>
+    <navigator url="../puzzle/puzzle">
+      <view class='fleft'>
+        <image src='http://bolaa.wauwo.net/WXimages/a4.png'></image>
+        <text>我的拼图</text>
+      </view>
+    </navigator>
+    <navigator url="../calendar/calendar">
+      <view class='fright'>
+        <image src='http://bolaa.wauwo.net/WXimages/a5.png'></image>
+        <text>我的日历</text>
+      </view>
+    </navigator>
+  </view>
+</template>

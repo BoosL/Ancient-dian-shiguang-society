@@ -1,0 +1,24 @@
+Page{
+
+index   ShouYe
+
+
+clock  QuweiDaka
+
+
+sonic  TiaoZhanRiLi
+
+
+puzzle  WodePingtu
+
+
+calendar WodeRiLI
+
+
+footer-template DibuTemplate
+
+
+app.js  RuKou
+
+}
+

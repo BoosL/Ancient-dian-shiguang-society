@@ -1,0 +1,29 @@
+<import src="../footer-template/footer-template.wxml" />
+<!-- 引用模块标签 -->
+<view style='position: relative;'>
+  <image class='cbanner' src='http://bolaa.wauwo.net/WXimages/b1.png'></image>
+  <text class='rule'>活动规则</text>
+  <view class="boxF">
+    <view class="boxS">
+      <view class="boxT">
+        <!--通过数据绑定的方式动态获取js数据-->
+        <view class="boxFF">
+          <view class="boxSS">
+            <image class="boxTT" src="{{source}}" mode="aspecFill">
+              <image class='logs' wx:if="{{change}}" src='http://bolaa.wauwo.net/WXimages/b2.png'></image>
+              <text class='tex'>UPLOAD \n BEAUTIFUL PHOTOS</text>
+              <text class='texs'>上传美图</text>
+              <text class='texts' decode="{{true}}">
+              一&nbsp;&nbsp;|&nbsp;&nbsp;天&nbsp;&nbsp;|&nbsp;&nbsp;新&nbsp;&nbsp;|&nbsp;&nbsp;似&nbsp;&nbsp;|&nbsp;&nbsp;一&nbsp;&nbsp;|&nbsp;&nbsp;天
+              </text>
+            </image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text class='lButton' bindtap="listenerButtonChooseImage">上传图片</text>
+  <text class='rButton'>确认打卡</text>
+  <text class='item' decode="{{true}}">今日坚持事项：&nbsp;&nbsp; 跑步</text>
+</view>
+<template is="postItem" />

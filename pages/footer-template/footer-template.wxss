@@ -1,0 +1,50 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  height: 90rpx;
+  width: 100%;
+  font-size: 18rpx;
+  color: #333;
+  font-weight: 600;
+}
+
+.fleft {
+  height: 100%;
+  text-align: center;
+  float: left;
+  width: 50%;
+}
+
+.fleft image {
+  width: 40rpx;
+  height: 44rpx;
+  vertical-align: middle;
+  margin-top: 10rpx;
+}
+
+.fleft text {
+  position: absolute;
+  top: 62rpx;
+  left: 155rpx;
+}
+
+.fright {
+  height: 100%;
+  text-align: center;
+  float: right;
+  width: 50%;
+}
+
+.fright image {
+  width: 40rpx;
+  height: 44rpx;
+  vertical-align: middle;
+  margin-top: 10rpx;
+}
+
+.fright text {
+  position: absolute;
+  top: 62rpx;
+  right: 155rpx;
+}

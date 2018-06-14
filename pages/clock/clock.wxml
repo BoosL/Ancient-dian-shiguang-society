@@ -1,0 +1,83 @@
+<import src="../footer-template/footer-template.wxml" />
+<!-- 引用模块标签 -->
+<view class='container'>
+  <swiper current="{{currentTab}}" class="swiper-box" bindchange="bindChange">
+    <swiper-item>
+      <view>
+        <image class='cbanner' src='http://bolaa.wauwo.net/WXimages/b1.png'></image>
+        <text class='rule'>活动规则</text>
+        <view class="boxF">
+          <view class="boxS">
+            <view class="boxT">
+              <view>
+                <text class='title'>Unbelievabl</text>
+                <text class='Interpreter' decode="{{true}}">[ˌʌnbɪˈli:vəbl]&nbsp;&nbsp;&nbsp;&nbsp;不可相信的; 站不住脚的;</text>
+              </view>
+              <text class='tex'>RECOGNIZE \n ENGLISH WORDS</text>
+              <text class='texs'>认单词</text>
+              <text class='texts' decode="{{true}}">
+              一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
+              </text>
+            </view>
+          </view>
+        </view>
+        <text class='lButton' bindtap='Shangtiao'>上一个</text>
+        <text class='rButton' bindtap='Xiatiao'>下一个</text>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <image class='cbanner' src='http://bolaa.wauwo.net/WXimages/b1.png'></image>
+        <text class='rule'>活动规则</text>
+        <view class="boxF">
+          <view class="boxS">
+            <view class="boxT">
+              <!--通过数据绑定的方式动态获取js数据-->
+              <view class="boxFF">
+                <view class="boxSS">
+                  <image class="boxTT" src="{{source}}" mode="aspecFill">
+                    <image class='logs' wx:if="{{change}}" src='http://bolaa.wauwo.net/WXimages/b2.png'></image>
+                    <text class='tex'>UPLOAD \n BEAUTIFUL PHOTOS</text>
+                    <text class='texs'>上传美图</text>
+                    <text class='texts' decode="{{true}}">
+              一&nbsp;&nbsp;|&nbsp;&nbsp;天&nbsp;&nbsp;|&nbsp;&nbsp;新&nbsp;&nbsp;|&nbsp;&nbsp;似&nbsp;&nbsp;|&nbsp;&nbsp;一&nbsp;&nbsp;|&nbsp;&nbsp;天
+              </text>
+                  </image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <text class='lButton' bindtap="listenerButtonChooseImage">上传图片</text>
+        <text class='rButton'>确认打卡</text>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <image class='cbanner' src='http://bolaa.wauwo.net/WXimages/b1.png'></image>
+        <text class='rule'>活动规则</text>
+        <view class="boxF">
+          <view class="boxS">
+            <view class="boxT">
+              <text class='title'>8000步</text>
+              <text class='judge' decode="{{true}}">距离打卡还有&nbsp;<text style='color: #ffa4a5; border-bottom:1px solid #ffa4a5;'>2000步</text>，请继续打卡</text>
+              <text class='tex'>WECHAT \n 10，000 STEPS </text>
+              <text class='texs'>微信步数10000</text>
+              <text class='texts' decode="{{true}}">
+              一&nbsp;&nbsp;|&nbsp;&nbsp;天&nbsp;&nbsp;|&nbsp;&nbsp;新&nbsp;&nbsp;|&nbsp;&nbsp;似&nbsp;&nbsp;|&nbsp;&nbsp;一&nbsp;&nbsp;|&nbsp;&nbsp;天
+              </text>
+            </view>
+          </view>
+        </view>
+        <text class='runBtn'>确认打卡</text>
+      </view>
+    </swiper-item>
+  </swiper>
+  <template is="postItem" />
+</view>
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav"></view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav"></view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav"></view>
+</view>
+<view class="swiper-tab-temp"></view>

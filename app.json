@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/puzzle/puzzle",
+    "pages/index/index",
+    
+    "pages/sonic/sonic",
+    "pages/clock/clock",
+    
+    
+    "pages/calendar/calendar",
+    
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "拾光社",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  }
+}

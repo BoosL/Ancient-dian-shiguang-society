@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<import src="../footer-template/footer-template.wxml" />
+<!-- 引用模块标签 -->
+<view class="content">
+  <image class='cbanner' src='http://bolaa.wauwo.net/WXimages/a1.png'></image>
+  <image bindtap="onPostTap" class='punch-card' src='http://bolaa.wauwo.net/WXimages/a2.png'></image>
+  <image class='CY' bindtap="onPostsTap" src='http://bolaa.wauwo.net/WXimages/a3.png'></image>
+  <template is="postItem" />
+</view>
