@@ -8,7 +8,12 @@ page {
 
 /* 引用模块样式 */
 
-.container {
+
+
+
+
+.content {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -17,20 +22,30 @@ page {
 
 .cbanner {
   width: 750rpx;
-  height: 1130rpx;
+  height: 100%;
+}
+
+.four {
+  position: absolute;
+  left: 78rpx;
+  top: 50rpx;
+  width: 591rpx;
+  height: 702rpx;
 }
 
 .punch-card {
   position: absolute;
   bottom: 100px;
-  left: 110rpx;
+  left: -300rpx;
+  /*  left: 100rpx; */
   width: 230rpx;
   height: 250rpx;
 }
 
 .CY {
   position: absolute;
-  right: 100rpx;
+  right: -300rpx;
+  /*  right: 100rpx; */
   bottom: 100px;
   width: 230rpx;
   height: 250rpx;

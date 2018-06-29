@@ -13,12 +13,7 @@
     <image src='http://bolaa.wauwo.net/WXimages/c3.png'></image>
     <text class='itemss' decode="{{true}}">坚持事项 &nbsp;&nbsp;（如：跑步）</text>
     <text class='time'>2018年6月5日</text>
-    <text class='sign'>已签到</text>
-  </view>
-  <view class='GIFT'>
-    <image src='http://bolaa.wauwo.net/WXimages/c2.png'></image>
-    <text class='GIFTs'>礼品兑换</text>
-    <text class='time'>每周三可集齐***+兑换礼品</text>
-    <text class='convert'>去兑换</text>
+    <text class='convert' wx-if="{{done}}" bindtap="onDoneTap">去完成</text>
+    <text class='sign' wx-if="{{sing}}">已签到</text>
   </view>
 </view>

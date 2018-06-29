@@ -1,7 +1,7 @@
 <view class="CA-content">
   <image class='Cbanner' src='http://bolaa.wauwo.net/WXimages/c4.png'></image>
   <image class='logs' src='http://bolaa.wauwo.net/WXimages/a6.png'></image>
-  <text class='rule'>活动规则</text>
+  <!-- <text class='rule'>活动规则</text> -->
   <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
   <view class="boxF">
     <view class="boxS">
@@ -9,8 +9,8 @@
         <view class="boxFF">
           <view class="boxSS">
             <view class="boxTT">
-              <view  class='PPF'>
-                 <view wx:for="{{[1, 2, 3]}}"></view>
+              <view class='PPF'>
+                <view wx:for="{{[1, 2, 3]}}" wx:key="{{[1, 2, 3]}}"></view>
               </view>
             </view>
           </view>

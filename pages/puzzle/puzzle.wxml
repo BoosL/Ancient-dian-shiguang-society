@@ -1,23 +1,92 @@
 <view class="CA-content">
-  <image class='Cbanner' src='http://bolaa.wauwo.net/WXimages/c4.png'></image>
-  <text class='rule'>活动规则</text>
-  <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
-  <view class="boxF">
-    <view class="boxS">
-      <view class="boxT">
-        <view class="boxFF">
-          <view class="boxSS">
-            <view class="boxTT">
-
+  <image class='logs' src='http://bolaa.wauwo.net/WXimages/a6.png'></image>
+  <text class='rule' bindtap="show">活动规则</text>
+  <swiper current="{{currentTab}}" class="swiper-box" bindchange="bindChange">
+    <swiper-item>
+      <view>
+        <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
+        <view class="boxF">
+          <view class="boxS">
+            <view class="boxT">
+              <view class="boxFF">
+                <view class="boxSS">
+                  <view class="boxTT">
+                    <view class='PPF'>
+                      <view class='one' wx:for="{{listt}}" wx:key="{{listt}}" style='background-image: {{item.bgimagc}}'></view>
+                    </view>
+                  </view>
+                </view>
+              </view>
             </view>
           </view>
         </view>
-      </view>
-    </view>
-  </view>
-  <text class='tex'>RECOGNIZE \n ENGLISH WORDS</text>
-  <text class='texs'>认单词</text>
-  <text class='texts' decode="{{true}}">
+        <text class='lottery' wx-if="{{lottery}}">点击抽奖</text>
+        <text class='lottos' wx-if="{{lottos}}" bindtap="lottos">点击抽奖</text>
+        <text class='tex'>RECOGNIZE \n ENGLISH WORDS</text>
+        <text class='texs'>认单词</text>
+        <text class='texts' decode="{{true}} ">
     一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
   </text>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
+        <view class="boxF ">
+          <view class="boxS ">
+            <view class="boxT ">
+              <view class="boxFF ">
+                <view class="boxSS ">
+                  <view class="boxTT ">
+                    <view class='PPF'>
+                      <view class='one' wx:for="{{listo}}" wx:key="{{listo}}" style='background-image: {{item.bgimagb}}'></view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <text class='lottery' wx-if="{{lotteryo}}">点击抽奖</text>
+        <text class='lottos' wx-if="{{lottoso}}" bindtap="lottos">点击抽奖</text>
+        <text class='tex'>UPLOAD \n BEAUTIFUL PHOTOS</text>
+        <text class='texs'>上传美图</text>
+        <text class='texts' decode="{{true}} ">
+    一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
+  </text>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
+        <view class="boxF ">
+          <view class="boxS ">
+            <view class="boxT ">
+              <view class="boxFF ">
+                <view class="boxSS ">
+                  <view class="boxTT ">
+                    <view class='PPF'>
+                      <view class='one' wx:for="{{list}}" wx:key="{{list}}" style='background-image: {{item.bgimaga}}'></view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <text class='lottery' wx-if="{{lotteryt}}">点击抽奖</text>
+        <text class='lottos' wx-if="{{lottost}}" bindtap="lottos">点击抽奖</text>
+        <text class='tex'>WECHAT \n 10，000 STEPS </text>
+        <text class='texs'>微信步数10000</text>
+        <text class='texts' decode="{{true}} ">
+    一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
+  </text>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="swiper-tab ">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}} " data-current="0 " bindtap="swichNav "></view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} " data-current="1 " bindtap="swichNav "></view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}} " data-current="2 " bindtap="swichNav "></view>
+  </view>
 </view>

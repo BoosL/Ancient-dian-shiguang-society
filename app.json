@@ -1,22 +1,18 @@
 {
   "pages": [
-    "pages/puzzle/puzzle",
     "pages/index/index",
-    
-    "pages/sonic/sonic",
+    "pages/puzzle/puzzle",
     "pages/clock/clock",
-    
-    
+    "pages/sonic/sonic",
     "pages/calendar/calendar",
-    
+    "pages/coupons/coupons",
+    "pages/indexs/indexs",
     "pages/logs/logs"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "拾光社",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true,
-    "backgroundTextStyle": "dark"
+    "navigationBarTextStyle": "black"
   }
 }

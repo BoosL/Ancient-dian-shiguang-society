@@ -1,15 +1,15 @@
 <template name="postItem">
   <view class='footer'>
-    <navigator url="../puzzle/puzzle">
+    <navigator url="../puzzle/puzzle?data">
       <view class='fleft'>
         <image src='http://bolaa.wauwo.net/WXimages/a4.png'></image>
         <text>我的拼图</text>
       </view>
     </navigator>
-    <navigator url="../calendar/calendar">
+    <navigator url="../coupons/coupons?data">
       <view class='fright'>
         <image src='http://bolaa.wauwo.net/WXimages/a5.png'></image>
-        <text>我的日历</text>
+        <text>我的茶山劵</text>
       </view>
     </navigator>
   </view>

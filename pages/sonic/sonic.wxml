@@ -1,8 +1,7 @@
 <import src="../footer-template/footer-template.wxml" />
 <!-- 引用模块标签 -->
-<view style='position: relative;'>
-  <image class='cbanner' src='http://bolaa.wauwo.net/WXimages/b1.png'></image>
-  <text class='rule'>活动规则</text>
+<view class='container'>
+  <text class='rule' bindtap="show">活动规则</text>
   <view class="boxF">
     <view class="boxS">
       <view class="boxT">
@@ -23,7 +22,7 @@
     </view>
   </view>
   <text class='lButton' bindtap="listenerButtonChooseImage">上传图片</text>
-  <text class='rButton'>确认打卡</text>
+  <text class='rButton'  bindtap="onSignTap">确认打卡</text>
   <text class='item' decode="{{true}}">今日坚持事项：&nbsp;&nbsp; 跑步</text>
 </view>
 <template is="postItem" />

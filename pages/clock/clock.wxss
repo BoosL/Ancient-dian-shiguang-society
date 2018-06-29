@@ -2,20 +2,37 @@
 
 /* 引用模块样式 */
 
+page {
+  height: 100%;
+}
+
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  background: url('http://bolaa.wauwo.net/WXimages/c4.png');
+  background-size: 100% 100%;
 }
 
 swiper-item view {
   height: 100%;
 }
 
-.cbanner {
-  width: 750rpx;
-  height: 100%;
+.swiper-box {
+  width: 100%;
+  height: 1130rpx;
+}
+
+.log {
+  position: absolute;
+  left: 38rpx;
+  top: 32rpx;
+  width: 128rpx;
+  height: 80rpx;
+  background-image: url('http://bolaa.wauwo.net/WXimages/a6.png');
+  background-size: 100% 100%;
 }
 
 .rule {
@@ -27,6 +44,25 @@ swiper-item view {
   border-bottom: 1px solid #fff;
   color: #fff;
   font-size: 22rpx;
+  text-align: center;
+  z-index: 9999;
+}
+
+.show {
+  position: absolute;
+  top: 200rpx;
+  left: 200rpx;
+  z-index: 99;
+  width: 500rpx;
+  height: 500rpx;
+}
+
+.Sixborder {
+  position: absolute;
+  left: 80rpx;
+  top: 94rpx;
+  width: 587rpx;
+  height: 694rpx;
 }
 
 .boxF, .boxS, .boxT, .overlay {
@@ -63,18 +99,20 @@ swiper-item view {
   visibility: visible;
   background-color: #fff;
   background-size: 100% 100%;
+  white-space: nowrap;
+  width: 540rpx;
 }
 
 .boxFF, .boxSS, .boxTT, .overlay {
-  width: 540rpx;
-  height: 620rpx;
+  width: 520rpx;
+  height: 640rpx;
   overflow: hidden;
 }
 
 .boxFF {
   position: absolute;
-  top: 12rpx;
-  left: -12rpx;
+  top: 8rpx;
+  left: -10rpx;
   transform: rotate(120deg);
   float: left;
   margin-left: 10px;
@@ -97,26 +135,40 @@ swiper-item view {
   -moz-transform: rotate(-60deg);
   -webkit-transform: rotate(-60deg);
   visibility: visible;
-  background-color: #fff;
   background-size: 100% 100%;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-.title {
+.change {
+  float: left;
+  width: 540rpx;
+  height: auto;
+  text-align: center;
+}
+
+.title, .titles {
+  width: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 180rpx;
-  font-size: 78rpx;
-  background: -webkit-linear-gradient(to right, #3e0f98, #d63e4b); /* Safari 5.1 - 6.0 */
-  background: -o-linear-gradient(to right, #3e0f98, #d63e4b); /* Opera 11.1 - 12.0 */
-  background: -moz-linear-gradient(to right, #3e0f98, #d63e4b); /* Firefox 3.6 - 15 */
-  background: linear-gradient(to right, #3e0f98, #d63e4b); /* 标准的语法 */
+  margin-top: 160rpx;
+  font-size: 68rpx;
+  /*  background: -webkit-linear-gradient(to right, #3e0f98, #d63e4b); 
+  background: -o-linear-gradient(to right, #3e0f98, #d63e4b); 
+  background: -moz-linear-gradient(to right, #3e0f98, #d63e4b); 
+  background: linear-gradient(to right, #3e0f98, #d63e4b); 
   -webkit-background-clip: text;
-  color: transparent;
+  -o-background-clip: text;
+  -moz--background-clip: text;
+  background-clip: text; 
+  color: transparent;*/
+  color: #d63e4b;
   font-weight: 600;
+  text-align: center;
 }
 
 .Interpreter, .judge {
+  width: 420rpx;
   font-size: 22rpx;
   color: #999;
   display: flex;
@@ -162,7 +214,7 @@ swiper-item view {
 
 .texts {
   font-size: 16rpx;
-  top: 508rpx;
+  top: 490rpx;
   font-weight: 600;
   color: #666;
 }
@@ -211,9 +263,4 @@ swiper-item view {
 .on {
   background-color: #fff;
   opacity: 0.5;
-}
-
-.swiper-box {
-  width: 100%;
-  height: 1130rpx;
 }

@@ -56,7 +56,7 @@ page {
   margin-left: 84rpx;
 }
 
-.items, .GIFT {
+.items{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -73,14 +73,9 @@ page {
   height: 64rpx;
 }
 
-.GIFT  image {
-  margin-top: 40rpx;
-  margin-left: 50rpx;
-  width: 51rpx;
-  height: 51rpx;
-}
 
-.itemss, .GIFTs, .time {
+
+.itemss,  .time {
   position: absolute;
   left: 128rpx;
   top: 34rpx;
