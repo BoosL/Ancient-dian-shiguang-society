@@ -8,10 +8,6 @@ page {
 
 /* 引用模块样式 */
 
-
-
-
-
 .content {
   position: relative;
   display: flex;
@@ -35,9 +31,8 @@ page {
 
 .punch-card {
   position: absolute;
-  bottom: 100px;
+  bottom: 18%;
   left: -300rpx;
-  /*  left: 100rpx; */
   width: 230rpx;
   height: 250rpx;
 }
@@ -45,8 +40,7 @@ page {
 .CY {
   position: absolute;
   right: -300rpx;
-  /*  right: 100rpx; */
-  bottom: 100px;
+  bottom: 18%;
   width: 230rpx;
   height: 250rpx;
 }

@@ -19,11 +19,10 @@ Page({
     shows: false,
     total: '',
     results: '', //上传图片地址
-    animationData: {}
   },
 
 
-  show: function(ee) {
+  show: function (ee) {
     wx.showModal({
       title: '活动规则',
       content: '趣味打卡分为认单词、上传美图、微信步数三个部分，选择一件你感兴趣的事情去挑战，连续打卡拼图达到21张，即可获得一份小礼物！\r\n认识当天十个单词完成，即可打卡并获得拼图\r\n点击上传图片，选择照片上传，每次上传照片完成打卡后即可获得一张拼图\r\n每天微信步数达到10000步及以上，即可参与打卡，打卡获得一张拼图',
@@ -33,7 +32,7 @@ Page({
 
 
   /*** 滑动切换tab***/
-  swiperTab: function(e) {
+  swiperTab: function (e) {
     var that = this;
     var session_code = wx.getStorageSync('session_code');
     var page_code = e.detail.current;
@@ -55,7 +54,7 @@ Page({
           sessionId: session_code,
           punchType: 2
         },
-        success: function(datas) {
+        success: function (datas) {
           if (datas.data.result.todayIsPunch == 1) {
             wx.showToast({
               title: '今日美图已打卡',
@@ -84,7 +83,7 @@ Page({
           sessionId: session_code,
           punchType: 1
         },
-        success: function(datas) {
+        success: function (datas) {
           if (datas.data.result.todayIsPunch == 1) {
             wx.showToast({
               title: '今日运动已打卡',
@@ -114,7 +113,7 @@ Page({
               encryptedData: res.encryptedData,
               iv: res.iv
             },
-            success: function(data_1) {
+            success: function (data_1) {
               if (data_1.data.e == 0) {
                 if (data_1.data.result.step >= 10000) {
                   that.setData({
@@ -143,14 +142,14 @@ Page({
     }
   },
   /*** 点击tab切换***/
-  swichNav: function(e) {
+  swichNav: function (e) {
     var that = this;
     that.setData({
       currentTab: e.target.dataset.current
     });
   },
 
-  Shangtiao: function(res) {
+  Shangtiao: function (res) {
     var that = this;
     var lengthes = wx.getStorageSync('lengthes');
     if (that.data.showNum === 0) {
@@ -158,14 +157,14 @@ Page({
     }
     that.data.showNum--
 
-      that.data.marginLeft = parseInt(that.data.marginLeft) + 540 + ''
+    that.data.marginLeft = parseInt(that.data.marginLeft) + 540 + ''
     that.setData({
       showNum: that.data.showNum,
       marginLeft: that.data.marginLeft,
     })
 
   },
-  Xiatiao: function(res) {
+  Xiatiao: function (res) {
     var that = this;
     var lengthes = wx.getStorageSync('lengthes');
     if (this.data.showNum >= lengthes - 1) {
@@ -175,26 +174,16 @@ Page({
       })
       return
     }
-
-    /*   var animation = wx.createAnimation({
-        transformOrigin: "50% 50%",
-        duration: 1000,
-        timingFunction: "ease",
-        delay: 0
-      })
-      animation.translateX(540).step(); */
-
     this.data.showNum++
-      that.data.marginLeft = parseInt(that.data.marginLeft) - 540 + ''
+    that.data.marginLeft = parseInt(that.data.marginLeft) - 540 + ''
     that.setData({
       showNum: that.data.showNum,
       marginLeft: that.data.marginLeft,
-      animationData: animation.export()
     })
 
   },
   //上传图片
-  listenerButtonChooseImage: function(res) {
+  listenerButtonChooseImage: function (res) {
     var that = this;
     var session_code = wx.getStorageSync('session_code');
     var bgColor = this.data.pageBackgroundColor == 'red' ? '#5cb85c' : '#fff';
@@ -205,19 +194,18 @@ Page({
       //album来源相册 camera相机 
       sourceType: ['album', 'camera'],
       //成功时会回调
-      success: function(res) {
+      success: function (res) {
         var source = res.tempFilePaths
         //重绘视图
         that.setData({
-            source: res.tempFilePaths,
-            change: false,
-          }),
+          source: res.tempFilePaths,
+          change: false,
+        }),
           wx.uploadFile({
             url: 'https://gz.wauwo.net/miniAPP/file/udpalaodImage?sessionId=' + session_code + '&d=' + Date.now(),
             filePath: res.tempFilePaths[0],
             name: 'file',
-            success: function(data) {
-              console.log(data)
+            success: function (data) {
               that.setData({
                 results: JSON.parse(data.data).result
               })
@@ -227,8 +215,8 @@ Page({
               })
 
             },
-            fail: function(data) {
-              console.log(data.errorMessage)
+            fail: function (data) {
+              console.log(data.data.errorMessage)
             }
           })
 
@@ -237,19 +225,18 @@ Page({
   },
 
   //上传图片确认打卡
-  ImgConfirmTheClock: function(res) {
+  ImgConfirmTheClock: function (res) {
     var that = this;
     if (that.data.result.length > 5) {
       var session_code = wx.getStorageSync('session_code');
       var results = wx.getStorageSync('results');
-      console.log(wx.getStorageSync('results'))
       wx.request({
         url: 'https://gz.wauwo.net/miniAPP/file/filePunchCard?d=' + Date.now(),
         data: {
           sessionId: session_code,
           imgUrl: results
         },
-        success: function(data) {
+        success: function (data) {
           if (data.data.e == 0) {
             wx.showToast({
               title: '打卡成功',
@@ -264,8 +251,8 @@ Page({
             })
           }
         },
-        fail: function(data) {
-          console.log(data.errorMessage)
+        fail: function (data) {
+          console.log(data.data.errorMessage)
         }
       })
     } else {
@@ -278,7 +265,7 @@ Page({
   },
 
   //单词打卡
-  workclock: function(res) {
+  workclock: function (res) {
     var that = this;
     var session_code = wx.getStorageSync('session_code');
     wx.request({
@@ -290,7 +277,7 @@ Page({
       data: {
         sessionId: session_code
       },
-      success: function(data) {
+      success: function (data) {
         if (data.data.e == 0) {
           wx.showToast({
             title: '打卡成功',
@@ -311,7 +298,7 @@ Page({
 
 
   //微信运动打卡
-  SportsConfirmTheClock: function(res) {
+  SportsConfirmTheClock: function (res) {
     var that = this;
     var session_code = wx.getStorageSync('session_code');
     if (this.data.step >= 10000) {
@@ -325,7 +312,7 @@ Page({
           sessionId: session_code,
           type_code: 0
         },
-        success: function(data) {
+        success: function (data) {
           if (data.data.e == 0) {
             wx.showToast({
               title: '打卡成功',
@@ -355,7 +342,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(res) {
+  onLoad: function (res) {
     var that = this;
     that.setData({
       loadingHidden: true,
@@ -371,7 +358,8 @@ Page({
       data: {
         sessionId: session_code
       },
-      success: function(data) {
+      success: function (data) {
+        console.log(data)
         that.setData({
           result: data.data.result,
           width: 540 * data.data.result.length,
@@ -395,7 +383,7 @@ Page({
         sessionId: session_code,
         punchType: 3
       },
-      success: function(datas) {
+      success: function (datas) {
         if (datas.data.result.todayIsPunch == 1) {
           wx.showToast({
             title: '今日单词已打卡',
@@ -420,49 +408,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

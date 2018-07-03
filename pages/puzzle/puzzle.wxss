@@ -49,7 +49,7 @@ page {
 .Sixborder {
   position: absolute;
   left: 80rpx;
-  top: 94rpx;
+  top: 95rpx;
   width: 587rpx;
   height: 694rpx;
 }
@@ -62,7 +62,7 @@ page {
 
 .boxF {
   position: absolute;
-  top: 120rpx;
+  top: 121rpx;
   left: 76rpx;
   transform: rotate(120deg);
   float: left;
@@ -165,31 +165,22 @@ page {
   border-left: none;
 }
 
-.lottos, .lottery {
+.hint,.hints {
   position: absolute;
-  bottom: 540rpx;
-  left: 269rpx;
-  border-radius: 29rpx;
-  width: 209rpx;
-  height: 59rpx;
-  font-size: 30rpx;
+  bottom: 320rpx;
+  font-size: 20rpx;
+  color: #f5ff01;
+  width: auto;
+  height: 58rpx;
+  border-bottom: 1rpx solid #f5ff01;
+  left: 50%;
+  transform: translate(-50%,0);
   text-align: center;
-  line-height: 59rpx;
 }
 
-.lottos{
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;      
+.hints{
+  color: #ccc;
 }
-
-.lottery {
-  background-color: #fff100;
-  border: 1px solid #fff100;
-  color: #372700;                      
-}
-
-
 
 .tex, .texs, .texts {
   position: absolute;
@@ -202,18 +193,18 @@ page {
 }
 
 .tex {
-  bottom: 294rpx;
-  font-size: 44rpx;
+  bottom: 210rpx;
+  font-size: 38rpx;
 }
 
 .texs {
-  bottom: 230rpx;
+  bottom: 150rpx;
   font-size: 36rpx;
 }
 
 .texts {
   font-size: 15rpx;
-  bottom: 200rpx;
+  bottom: 120rpx;
 }
 
 swiper-item view {
@@ -222,7 +213,7 @@ swiper-item view {
 
 .swiper-tab {
   position: absolute;
-  bottom: 132rpx;
+  bottom: 60rpx;
   width: 100%;
   text-align: center;
 }

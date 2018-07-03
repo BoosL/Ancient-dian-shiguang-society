@@ -5,19 +5,14 @@ Page({
    */
   data: {
     currentTab: 0,
-    list: [],
-    listo: [],
-    listt: [],
+    list: [],  //步数
+    listo: [], // 图片
+    listt: [], // 单词
     punchNum: '', //打卡次数
 
-    lottos: false, //点击抽奖 可点击抽奖 单词
-    lottery: true, //点击抽奖  不可点击  
-
-    lottoso: false, //点击抽奖 可点击抽奖  美图
-    lotteryo: true, //点击抽奖  不可点击  
-
-    lottost: false, //点击抽奖 可点击抽奖 打卡
-    lotteryt: true //点击抽奖  不可点击  
+    isAwardsWord: '',
+    isAwardsImages: '',
+    isAwardsStep: ''
   },
 
   /*** 滑动切换tab***/
@@ -57,7 +52,6 @@ Page({
   onLoad: function(res) {
     var that = this;
     var session_code = wx.getStorageSync('session_code');
-
     //单词打卡拼图
     wx.request({
       url: 'https://gz.wauwo.net/miniAPP/punchCard/getPunchInfoCardByType',
@@ -72,7 +66,7 @@ Page({
       success: function(data) {
         var arrayc = []
         for (var i = 0; i < 21; i++) {
-          if (i <= data.data.result.punchNum -1) {
+          if (i <= data.data.result.punchNum - 1) {
             arrayc.push({
               bgimagc: 'url(http://gz.wauwo.net/miniAPP/resources/tempImage/0' + (i + 1) + '.png)'
             })
@@ -83,14 +77,9 @@ Page({
           }
         }
         that.setData({
-          listt: arrayc
+          listt: arrayc,
+          isAwardsWord: data.data.result.isAwards
         })
-        if (data.data.result.punchNum == 21) {
-          that.setData({
-            lottery: false, //点击抽奖  不可点击
-            lottos: true //点击抽奖 可点击抽奖
-          })
-        }
       },
     });
 
@@ -119,14 +108,9 @@ Page({
           }
         }
         that.setData({
-          listo: arrayb
+          listo: arrayb,
+          isAwardsImages: data.data.result.isAwards
         })
-        if (data.data.result.punchNum == 21) {
-          that.setData({
-            lotteryo: false, //点击抽奖  不可点击
-            lottoso: true //点击抽奖 可点击抽奖
-          })
-        }
       },
     });
 
@@ -156,14 +140,9 @@ Page({
           }
         }
         that.setData({
-          list: arraya
+          list: arraya,
+          isAwardsStep: data.data.result.isAwards
         })
-        if (data.data.result.punchNum == 21) {
-          that.setData({
-            lotteryt: false, //点击抽奖  不可点击
-            lottost: true //点击抽奖 可点击抽奖
-          })
-        }
       },
     });
 

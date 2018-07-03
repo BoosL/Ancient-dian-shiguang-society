@@ -13,7 +13,7 @@
         <view class="boxF">
           <view class="boxS">
             <view class="boxT">
-              <view style='width:{{width}}rpx; margin-left:{{marginLeft}}rpx;' animation="{{animationData}}">
+              <view style='width:{{width}}rpx; margin-left:{{marginLeft}}rpx;'>
                 <view class='change ' wx:for="{{result}}" wx:key="{{result}}">
                   <text class='title' decode="{{true}}">{{item.word}}</text>
                   <text class='Interpreter' decode="{{true}}">{{item.soundmark}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.interpret}}</text>

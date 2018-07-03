@@ -8,11 +8,10 @@ Page({
     animationData: {},
     animationDataone: {},
     loadingHidden: false,
-   
+
   },
 
   onPostTap: function(options) {
-
     wx.navigateTo({
       url: '../clock/clock?data'
     })
@@ -29,16 +28,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(data) {
-    this.setData({
+    var that = this;
+    that.setData({
       loadingHidden: false
     });
-    var that = this;
     setTimeout(function() {
       that.setData({
         loadingHidden: true,
         hidden: true
       });
-      that.update();
     }, 3000);
 
 

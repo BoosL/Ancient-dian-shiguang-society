@@ -4,7 +4,7 @@
     <text class='month'>6月<text class='day'>6日</text></text>
     <text class='rule'>活动规则</text>
     <view class='weekB'>
-      <block wx:for="{{array}}">
+      <block wx:for="{{array}}" wx:key="{{array}}">
         <text class='week'>{{item.message}}</text>
       </block>
     </view>

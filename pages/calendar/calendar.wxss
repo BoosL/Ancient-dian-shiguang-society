@@ -56,7 +56,7 @@ page {
   margin-left: 84rpx;
 }
 
-.items{
+.items {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -73,9 +73,7 @@ page {
   height: 64rpx;
 }
 
-
-
-.itemss,  .time {
+.itemss, .time {
   position: absolute;
   left: 128rpx;
   top: 34rpx;

@@ -20,8 +20,9 @@
             </view>
           </view>
         </view>
-        <text class='lottery' wx-if="{{lottery}}">点击抽奖</text>
-        <text class='lottos' wx-if="{{lottos}}" bindtap="lottos">点击抽奖</text>
+        <text class='hint' wx:if="{{isAwardsWord == 0}}">打卡未满21次  \n 无领奖资格</text>
+        <text class='hint' wx:if="{{isAwardsWord  == 1}}">打卡满21次 \n 有领奖资格</text>
+        <text class='hints' wx:if="{{isAwardsWord  == 2}}">奖品已领完 \n 无领奖资格</text>
         <text class='tex'>RECOGNIZE \n ENGLISH WORDS</text>
         <text class='texs'>认单词</text>
         <text class='texts' decode="{{true}} ">
@@ -47,8 +48,9 @@
             </view>
           </view>
         </view>
-        <text class='lottery' wx-if="{{lotteryo}}">点击抽奖</text>
-        <text class='lottos' wx-if="{{lottoso}}" bindtap="lottos">点击抽奖</text>
+       <text class='hint' wx:if="{{isAwardsImages == 0}}">打卡未满21次  \n 无领奖资格</text>
+        <text class='hint' wx:if="{{isAwardsImages  == 1}}">打卡满21次 \n 有领奖资格</text>
+        <text class='hints' wx:if="{{isAwardsImages  == 2}}">奖品已领完 \n 无领奖资格</text>
         <text class='tex'>UPLOAD \n BEAUTIFUL PHOTOS</text>
         <text class='texs'>上传美图</text>
         <text class='texts' decode="{{true}} ">
@@ -74,8 +76,9 @@
             </view>
           </view>
         </view>
-        <text class='lottery' wx-if="{{lotteryt}}">点击抽奖</text>
-        <text class='lottos' wx-if="{{lottost}}" bindtap="lottos">点击抽奖</text>
+       <text class='hint' wx:if="{{isAwardsStep == 0}}">打卡未满21次  \n 无领奖资格</text>
+        <text class='hint' wx:if="{{isAwardsStep  == 1}}">打卡满21次 \n 有领奖资格</text>
+        <text class='hints' wx:if="{{isAwardsStep  == 2}}">奖品已领完 \n 无领奖资格</text>
         <text class='tex'>WECHAT \n 10，000 STEPS </text>
         <text class='texs'>微信步数10000</text>
         <text class='texts' decode="{{true}} ">
