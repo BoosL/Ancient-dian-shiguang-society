@@ -1,40 +1,43 @@
 <import src="../footer-template/footer-template.wxml" />
 <!-- 引用模块标签 -->
-<loading class="loading" hidden="{{loadingHidden}}">
-  加载中...
-</loading>
 <view class='container'>
   <text class='rule' bindtap="show">活动规则</text>
   <view class='log'></view>
   <swiper current="{{currentTab}}" duration="500" bindchange="swiperTab" class="swiper-box">
     <swiper-item>
       <view>
-        <image src='http://bolaa.wauwo.net/WXimages/c5.png' class='Sixborder'></image>
+        <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png' class='Sixborder'></image>
         <view class="boxF">
           <view class="boxS">
             <view class="boxT">
               <view style='width:{{width}}rpx; margin-left:{{marginLeft}}rpx;'>
-                <view class='change ' wx:for="{{result}}" wx:key="{{result}}">
-                  <text class='title' decode="{{true}}">{{item.word}}</text>
-                  <text class='Interpreter' decode="{{true}}">{{item.soundmark}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.interpret}}</text>
+                <view class='change ' wx:for="{{single}}" wx:key="{{single}}">
+                  <text class='title'>{{item.WORD}}</text>
+                  <text class='Lo'>{{item.options[0].interpret}}</text>
+                  <text class='Lt' decode="{{true}}">{{item.options[1].interpret}}</text>
+                  <text class='Rt' decode="{{true}}">{{item.options[2].interpret}}</text>
+                  <text class='Ro' decode="{{true}}">{{item.options[3].interpret}}</text>
                 </view>
               </view>
-              <text class='tex'>RECOGNIZE \n ENGLISH WORDS</text>
-              <text class='texs'>认单词</text>
-              <text class='texts' decode="{{true}}">
-              一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
-              </text>
             </view>
           </view>
         </view>
-        <text class='lButton' bindtap='Shangtiao' wx-if="{{hidden}}">上一个</text>
-        <text class='rButton' bindtap='Xiatiao' wx-if="{{hidden}}">下一个</text>
+        <view class='choose' wx-if="{{hidden}}" wx:for="{{single}}" wx:key="{{singleword}}">
+          <view class='LeftC'>
+            <text class='LCo' data-id='{{item.options[0].temp}}' bindtap='Choose'>A</text>
+            <text class='LCt' data-id='{{item.options[2].temp}}' bindtap='Choose'>C</text>
+          </view>
+          <view class='RightC'>
+            <text class='RCo' data-id='{{item.options[1].temp}}' bindtap='Choose'>B</text>
+            <text class='RCt' data-id='{{item.options[3].temp}}' bindtap='Choose'>D</text>
+          </view>
+        </view>
         <text class='runBtn' bindtap="workclock" wx-if="{{shows}}">确认打卡</text>
       </view>
     </swiper-item>
     <swiper-item>
       <view>
-        <image src='http://bolaa.wauwo.net/WXimages/c5.png' class='Sixborder'></image>
+        <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png' class='Sixborder'></image>
         <view class="boxF">
           <view class="boxS">
             <view class="boxT">
@@ -42,7 +45,7 @@
               <view class="boxFF">
                 <view class="boxSS">
                   <image class="boxTT" src="{{source}}" mode="aspecFill">
-                    <image class='logs' wx:if="{{change}}" src='http://bolaa.wauwo.net/WXimages/b2.png'></image>
+                    <image class='logs' wx:if="{{change}}" src='http://gz.wauwo.net/miniAPP/resources/img/weixin/b2.png'></image>
                     <text class='tex' wx:if="{{change}}">UPLOAD \n BEAUTIFUL PHOTOS</text>
                     <text class='texs' wx:if="{{change}}">上传美图</text>
                     <text class='texts' decode="{{true}}" wx:if="{{change}}">
@@ -60,7 +63,7 @@
     </swiper-item>
     <swiper-item>
       <view>
-        <image src='http://bolaa.wauwo.net/WXimages/c5.png' class='Sixborder'></image>
+        <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png' class='Sixborder'></image>
         <view class="boxF">
           <view class="boxS">
             <view class="boxT">

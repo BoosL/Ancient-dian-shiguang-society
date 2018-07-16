@@ -1,10 +1,10 @@
 <view class="CA-content">
-  <image class='logs' src='http://bolaa.wauwo.net/WXimages/a6.png'></image>
+  <image class='logs' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a6.png'></image>
   <text class='rule' bindtap="show">活动规则</text>
   <swiper current="{{currentTab}}" class="swiper-box" bindchange="bindChange">
     <swiper-item>
       <view>
-        <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
+        <image class='Sixborder' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png'></image>
         <view class="boxF">
           <view class="boxS">
             <view class="boxT">
@@ -12,7 +12,8 @@
                 <view class="boxSS">
                   <view class="boxTT">
                     <view class='PPF'>
-                      <view class='one' wx:for="{{listt}}" wx:key="{{listt}}" style='background-image: {{item.bgimagc}}'></view>
+                       <view class='one' wx:if="{{hiddenw}}"  wx:for="{{listt}}" wx:key="{{listt}}"  style='background-image: {{item.bgimagc}};'></view> 
+                      <view class='two' wx:if="{{showw}}" style='background-image: {{bgimagcc}};'></view>
                     </view>
                   </view>
                 </view>
@@ -25,14 +26,11 @@
         <text class='hints' wx:if="{{isAwardsWord  == 2}}">奖品已领完 \n 无领奖资格</text>
         <text class='tex'>RECOGNIZE \n ENGLISH WORDS</text>
         <text class='texs'>认单词</text>
-        <text class='texts' decode="{{true}} ">
-    一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
-  </text>
       </view>
     </swiper-item>
     <swiper-item>
       <view>
-        <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
+        <image class='Sixborder' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png'></image>
         <view class="boxF ">
           <view class="boxS ">
             <view class="boxT ">
@@ -40,7 +38,8 @@
                 <view class="boxSS ">
                   <view class="boxTT ">
                     <view class='PPF'>
-                      <view class='one' wx:for="{{listo}}" wx:key="{{listo}}" style='background-image: {{item.bgimagb}}'></view>
+                      <view class='one'  wx:if="{{hiddeni}}" wx:for="{{listo}}" wx:key="{{listo}}" style='background-image: {{item.bgimagb}}'></view>
+                        <view class='two' wx:if="{{showi}}" style='background-image: {{bgimagbb}};'></view>
                     </view>
                   </view>
                 </view>
@@ -53,14 +52,11 @@
         <text class='hints' wx:if="{{isAwardsImages  == 2}}">奖品已领完 \n 无领奖资格</text>
         <text class='tex'>UPLOAD \n BEAUTIFUL PHOTOS</text>
         <text class='texs'>上传美图</text>
-        <text class='texts' decode="{{true}} ">
-    一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
-  </text>
       </view>
     </swiper-item>
     <swiper-item>
       <view>
-        <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
+        <image class='Sixborder' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png'></image>
         <view class="boxF ">
           <view class="boxS ">
             <view class="boxT ">
@@ -68,7 +64,8 @@
                 <view class="boxSS ">
                   <view class="boxTT ">
                     <view class='PPF'>
-                      <view class='one' wx:for="{{list}}" wx:key="{{list}}" style='background-image: {{item.bgimaga}}'></view>
+                      <view class='one'  wx:if="{{hiddens}}" wx:for="{{list}}" wx:key="{{list}}" style='background-image: {{item.bgimaga}}'></view>
+                        <view class='two' wx:if="{{shows}}" style='background-image: {{bgimagaa}};'></view>
                     </view>
                   </view>
                 </view>
@@ -81,9 +78,6 @@
         <text class='hints' wx:if="{{isAwardsStep  == 2}}">奖品已领完 \n 无领奖资格</text>
         <text class='tex'>WECHAT \n 10，000 STEPS </text>
         <text class='texs'>微信步数10000</text>
-        <text class='texts' decode="{{true}} ">
-    一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
-  </text>
       </view>
     </swiper-item>
   </swiper>

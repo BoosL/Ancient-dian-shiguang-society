@@ -1,19 +1,24 @@
 <view class="CA-content">
   <view class='calendar'>
-    <image class='Cbanner' src='http://bolaa.wauwo.net/WXimages/c1.png'></image>
-    <text class='month'>6月<text class='day'>6日</text></text>
-    <text class='rule'>活动规则</text>
+    <image class='Cbanner' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c1.png'></image>
+    <text class='month'>{{Month}}月<text class='day'>{{day}}日</text></text>
+    <text class='rule' bindtap="show">活动规则</text>
     <view class='weekB'>
       <block wx:for="{{array}}" wx:key="{{array}}">
         <text class='week'>{{item.message}}</text>
       </block>
     </view>
+    <view class='calendarlist'>
+      <block wx:for="{{calendar}}" wx:key="{{calendar}}" >
+        <text class='listday' style='color:{{color}};background-image: {{images}};'>{{item.day}}</text>
+      </block>
+    </view>
   </view>
   <view class='items'>
-    <image src='http://bolaa.wauwo.net/WXimages/c3.png'></image>
-    <text class='itemss' decode="{{true}}">坚持事项 &nbsp;&nbsp;（如：跑步）</text>
-    <text class='time'>2018年6月5日</text>
+    <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c3.png'></image>
+    <text class='itemss' decode="{{true}}">挑战日历</text>
+    <text class='time'>{{Year}}年{{Month}}月{{day}}日</text>
     <text class='convert' wx-if="{{done}}" bindtap="onDoneTap">去完成</text>
-    <text class='sign' wx-if="{{sing}}">已签到</text>
+    <text class='sign' wx-if="{{sing}}">已完成</text>
   </view>
 </view>

@@ -5,9 +5,10 @@
   加载中...
 </loading>
 <view class="content" wx-if="{{hidden}}">
-  <image class='cbanner' src='http://bolaa.wauwo.net/WXimages/c4.png'></image>
-  <image class='four' src='http://bolaa.wauwo.net/WXimages/a.png'></image>
-  <image animation="{{animationData}}" bindtap="onPostTap" class='punch-card' src='http://bolaa.wauwo.net/WXimages/a2.png'></image>
-  <image animation="{{animationDataone}}" class='CY' bindtap="onPostsTap" src='http://bolaa.wauwo.net/WXimages/a3.png'></image>
+  <image class='cbanner' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c4.png'></image>
+  <image class='four' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a.png'></image>
+  <text class='rule' bindtap="show">活动规则</text>
+  <image animation="{{animationData}}" bindtap="onPostTap" class='punch-card' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a2.png'></image>
+  <image animation="{{animationDataone}}" class='CY' bindtap="onPostsTap" src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a3.png'></image>
   <template is="postItem" />
 </view>

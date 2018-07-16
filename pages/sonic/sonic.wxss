@@ -10,7 +10,7 @@ page {
   width: 100%;
   height: 100%;
   position: relative;
-  background-image: url('http://bolaa.wauwo.net/WXimages/b1.png');
+  background-image: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/b1.png');
   background-size: 100% 100%;
 }
 
@@ -18,11 +18,24 @@ page {
   position: absolute;
   right: 46rpx;
   top: 76rpx;
-  width: 92rpx;
-  height: 30rpx;
+  width: auto;
+  height: 36rpx;
   border-bottom: 1px solid #fff;
   color: #fff;
-  font-size: 22rpx;
+  font-size: 26rpx;
+  text-align: center;
+  font-weight: 600;
+  z-index: 9999;
+}
+
+.log {
+  position: absolute;
+  left: 38rpx;
+  top: 32rpx;
+  width: 128rpx;
+  height: 80rpx;
+  background-image: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/a6.png');
+  background-size: 100% 100%;
 }
 
 .boxF, .boxS, .boxT, .overlay {

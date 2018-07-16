@@ -21,12 +21,28 @@ page {
   height: 100%;
 }
 
+
+
 .four {
   position: absolute;
   left: 78rpx;
   top: 50rpx;
   width: 591rpx;
   height: 702rpx;
+}
+
+.rule {
+  position: absolute;
+  right: 46rpx;
+  top: 76rpx;
+  width: auto;
+  height: 36rpx;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  font-weight: 600;
+  z-index: 9999;
 }
 
 .punch-card {

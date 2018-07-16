@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/puzzle/puzzle",
-    "pages/clock/clock",
-    "pages/sonic/sonic",
-    "pages/calendar/calendar",
     "pages/coupons/coupons",
+    "pages/calendar/calendar",
+    "pages/sonic/sonic",
+    "pages/clock/clock",
+    "pages/puzzle/puzzle",
     "pages/indexs/indexs",
     "pages/logs/logs"
   ],

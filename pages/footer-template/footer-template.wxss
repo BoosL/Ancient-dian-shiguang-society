@@ -10,7 +10,7 @@
 }
 
 .fleft {
-  height: 100%;
+ height: 90rpx;
   text-align: center;
   float: left;
   width: 50%;
@@ -26,11 +26,11 @@
 .fleft text {
   position: absolute;
   top: 62rpx;
-  left: 155rpx;
+  left: 120rpx;
 }
 
 .fright {
-  height: 100%;
+  height: 90rpx;
   text-align: center;
   float: right;
   width: 50%;
@@ -46,5 +46,5 @@
 .fright text {
   position: absolute;
   top: 62rpx;
-  right: 155rpx;
+  right: 130rpx;
 }

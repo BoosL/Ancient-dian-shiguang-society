@@ -2,6 +2,7 @@
 <!-- 引用模块标签 -->
 <view class='container'>
   <text class='rule' bindtap="show">活动规则</text>
+  <view class='log'></view>
   <view class="boxF">
     <view class="boxS">
       <view class="boxT">
@@ -9,11 +10,11 @@
         <view class="boxFF">
           <view class="boxSS">
             <image class="boxTT" src="{{source}}" mode="aspecFill">
-              <image class='logs' wx:if="{{change}}" src='http://bolaa.wauwo.net/WXimages/b2.png'></image>
-              <text class='tex'>UPLOAD \n BEAUTIFUL PHOTOS</text>
-              <text class='texs'>上传美图</text>
-              <text class='texts' decode="{{true}}">
-              一&nbsp;&nbsp;|&nbsp;&nbsp;天&nbsp;&nbsp;|&nbsp;&nbsp;新&nbsp;&nbsp;|&nbsp;&nbsp;似&nbsp;&nbsp;|&nbsp;&nbsp;一&nbsp;&nbsp;|&nbsp;&nbsp;天
+              <image class='logs' wx:if="{{change}}" src='http://gz.wauwo.net/miniAPP/resources/img/weixin/b2.png'></image>
+              <text class='tex' wx:if="{{change}}">UPLOAD \n BEAUTIFUL PHOTOS</text>
+              <text class='texs' wx:if="{{change}}">上传美图</text>
+              <text class='texts' decode="{{true}}" wx:if="{{change}}">
+             一&nbsp;|&nbsp;天&nbsp;|&nbsp;新&nbsp;|&nbsp;似&nbsp;|&nbsp;一&nbsp;|&nbsp;天
               </text>
             </image>
           </view>
@@ -22,7 +23,7 @@
     </view>
   </view>
   <text class='lButton' bindtap="listenerButtonChooseImage">上传图片</text>
-  <text class='rButton'  bindtap="onSignTap">确认打卡</text>
+  <text class='rButton' bindtap="ImgConfirmTheClock">确认打卡</text>
   <text class='item' decode="{{true}}">今日坚持事项：&nbsp;&nbsp; 跑步</text>
 </view>
 <template is="postItem" />

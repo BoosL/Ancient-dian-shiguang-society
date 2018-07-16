@@ -24,7 +24,7 @@ page {
   height: 100%;
 }
 
-.logs{
+.logs {
   position: absolute;
   left: 38rpx;
   top: 32rpx;
@@ -34,13 +34,16 @@ page {
 
 .rule {
   position: absolute;
-  right: 44rpx;
-  top: 78rpx;
-  width: 92rpx;
-  height: 30rpx;
+  right: 46rpx;
+  top: 76rpx;
+  width: auto;
+  height: 36rpx;
   border-bottom: 1px solid #fff;
   color: #fff;
-  font-size: 22rpx;
+  font-size: 26rpx;
+  text-align: center;
+  font-weight: 600;
+  z-index: 9999;
 }
 
 .Sixborder {
@@ -119,7 +122,7 @@ page {
   -moz-transform: rotate(-60deg);
   -webkit-transform: rotate(-60deg);
   visibility: visible;
-  background-image: url('http://bolaa.wauwo.net/WXimages/d1.png');
+  background-image: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/d1.png');
   background-size: 100% 100%;
   position: relative;
 }
@@ -128,7 +131,7 @@ page {
   position: absolute;
   left: 0rpx;
   top: 50%;
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
   height: 308rpx;
   width: 100%;
   border-top: 1rpx solid #ae43a6;
@@ -141,8 +144,10 @@ page {
   background: #fff;
   border-left: 1rpx solid #ae43a6;
   float: left;
+  background-size: 100% 100%;
 }
-.PPF view:nth-child(1){
+
+.PPF view:nth-child(1) {
   border-left: 0;
 }
 

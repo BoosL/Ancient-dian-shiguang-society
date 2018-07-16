@@ -7,7 +7,7 @@ page {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: url('http://bolaa.wauwo.net/WXimages/c4.png');
+  background: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/c4.png');
   background-size: 100% 100%;
 }
 
@@ -36,14 +36,16 @@ page {
 
 .rule {
   position: absolute;
-  right: 44rpx;
-  top: 78rpx;
-  width: 92rpx;
-  height: 30rpx;
+  right: 46rpx;
+  top: 76rpx;
+  width: auto;
+  height: 36rpx;
   border-bottom: 1px solid #fff;
   color: #fff;
-  font-size: 22rpx;
-  z-index: 99;
+  font-size: 26rpx;
+  text-align: center;
+  font-weight: 600;
+  z-index: 9999;
 }
 
 .Sixborder {
@@ -122,7 +124,7 @@ page {
   -moz-transform: rotate(-60deg);
   -webkit-transform: rotate(-60deg);
   visibility: visible;
-  background-image: url('http://bolaa.wauwo.net/WXimages/d1.png');
+  background-image: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/d1.png');
   background-size: 100% 100%;
   position: relative;
 }
@@ -135,22 +137,28 @@ page {
   height: 308rpx;
   width: 100%;
   border-top: 1rpx solid #ae43a6;
-  border-bottom: 1rpx solid #ae43a6;
 }
 
 .one {
   position: relative;
   left: 0;
   width: 14.26%;
-  height: 33.27%;
+  height: 103rpx;
   background: #fff;
   float: left;
   box-sizing: border-box;
-}
-
-.one {
+  background-size: 100% 100%;
   border-left: 1rpx solid #ae43a6;
   border-bottom: 1rpx solid #ae43a6;
+}
+
+.two {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  background-size: 100% 100%;
 }
 
 .one:nth-child(1) {
@@ -165,7 +173,7 @@ page {
   border-left: none;
 }
 
-.hint,.hints {
+.hint, .hints {
   position: absolute;
   bottom: 320rpx;
   font-size: 20rpx;
@@ -174,15 +182,16 @@ page {
   height: 58rpx;
   border-bottom: 1rpx solid #f5ff01;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   text-align: center;
 }
 
-.hints{
+.hints {
+  border-bottom: 1rpx solid #ccc;
   color: #ccc;
 }
 
-.tex, .texs, .texts {
+.tex, .texs {
   position: absolute;
   color: #fff;
   z-index: 10;
@@ -200,11 +209,6 @@ page {
 .texs {
   bottom: 150rpx;
   font-size: 36rpx;
-}
-
-.texts {
-  font-size: 15rpx;
-  bottom: 120rpx;
 }
 
 swiper-item view {

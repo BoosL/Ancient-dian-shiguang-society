@@ -1,3 +1,4 @@
+var session_code = wx.getStorageSync('session_code');
 Page({
 
   /**
@@ -26,7 +27,12 @@ Page({
         message: "六"
       },
     ],
-    done: "true"
+    done: true,
+    sing: false,
+
+    calendar: '',
+
+    isPunch: '',
   },
 
 
@@ -36,12 +42,57 @@ Page({
     })
   },
 
+  show: function(ee) {
+    wx.showModal({
+      title: '活动规则',
+      content: '每天一件小事打卡（如跑步、早起打卡），打卡一周（7天），即可获得一个荣誉勋章，集齐3个荣誉勋章后可获得一份古滇专属定制礼！',
+      showCancel: false,
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    
+    var that = this;
+    var bgColor = this.data.pageBackgroundColor == 'red' ? '#5cb85c' : '#db4a6b';
+    wx.request({
+      url: 'https://gz.wauwo.net/miniAPP/calendar/getPunchDetails',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "POST",
+      data: {
+        sessionId: session_code,
+      },
+      success: function(datas) {
+        console.log(datas.data.result)
+        var myDate = new Date();
+        that.setData({
+          calendar: datas.data.result,
+          Year: myDate.getFullYear(),
+          Month: myDate.getMonth() + 1,
+          day: myDate.getDate(),
+        })
+        for (var i in datas.data.result) {
+          var isPunch = datas.data.result[i].isPunch;
+          var isToday = datas.data.result[i].isToday;
+          if (isPunch == 1) {
+            that.setData({
+              done: false,
+              sing: true,
+              images: 'url(http://gz.wauwo.net/miniAPP/resources/tempImage/draw.png)',
+            })
+          }
+          if (isToday == 1) {
+            that.setData({
+              color: bgColor
+            })
+          }
+        }
+      },
+    });
   },
 
   /**

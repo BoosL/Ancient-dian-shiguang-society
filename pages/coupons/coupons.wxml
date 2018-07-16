@@ -1,8 +1,8 @@
 <view class="CA-content">
-  <image class='Cbanner' src='http://bolaa.wauwo.net/WXimages/c4.png'></image>
-  <image class='logs' src='http://bolaa.wauwo.net/WXimages/a6.png'></image>
+  <image class='Cbanner' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c4.png'></image>
+  <image class='logs' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a6.png'></image>
   <!-- <text class='rule'>活动规则</text> -->
-  <image class='Sixborder' src='http://bolaa.wauwo.net/WXimages/c5.png'></image>
+  <image class='Sixborder' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png'></image>
   <view class="boxF">
     <view class="boxS">
       <view class="boxT">
@@ -10,7 +10,7 @@
           <view class="boxSS">
             <view class="boxTT">
               <view class='PPF'>
-                <view wx:for="{{[1, 2, 3]}}" wx:key="{{[1, 2, 3]}}"></view>
+                <view wx:for="{{list}}" wx:key="{{list}}"  style='background-image: {{item.bgimag}};'></view>
               </view>
             </view>
           </view>

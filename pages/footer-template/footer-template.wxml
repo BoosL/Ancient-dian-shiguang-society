@@ -2,14 +2,14 @@
   <view class='footer'>
     <navigator url="../puzzle/puzzle?data">
       <view class='fleft'>
-        <image src='http://bolaa.wauwo.net/WXimages/a4.png'></image>
-        <text>我的拼图</text>
+        <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a4.png'></image>
+        <text>趣味打卡礼品券</text>
       </view>
     </navigator>
     <navigator url="../coupons/coupons?data">
       <view class='fright'>
-        <image src='http://bolaa.wauwo.net/WXimages/a5.png'></image>
-        <text>我的茶山劵</text>
+        <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a5.png'></image>
+        <text>挑战日历礼品券</text>
       </view>
     </navigator>
   </view>

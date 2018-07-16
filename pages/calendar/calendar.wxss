@@ -1,7 +1,3 @@
-page {
-  background-color: #f4f4f4;
-}
-
 .CA-content {
   position: relative;
   display: flex;
@@ -34,13 +30,16 @@ page {
 
 .rule {
   position: absolute;
-  right: 42rpx;
-  top: 42rpx;
-  width: 92rpx;
-  height: 30rpx;
+  right: 24rpx;
+  top: 30rpx;
+  width: auto;
+  height: 36rpx;
   border-bottom: 1px solid #fff;
   color: #fff;
-  font-size: 22rpx;
+  font-size: 26rpx;
+  text-align: center;
+  font-weight: 600;
+  z-index: 9999;
 }
 
 .weekB {
@@ -54,6 +53,30 @@ page {
 
 .week {
   margin-left: 84rpx;
+}
+
+.calendarlist {
+  position: relative;
+  top: -10rpx;
+  height: 600rpx;
+  width: 100%;
+}
+
+
+
+.listday {
+  position: relative;
+  left: -20rpx;
+  width: 39rpx;
+  height: 34rpx;
+  float: left;
+  margin-left: 66rpx;
+  margin-top: 80rpx;
+  font-size: 32rpx;
+  color: #333;
+  box-sizing: border-box;
+  text-align: right;
+  background-size: cover;
 }
 
 .items {

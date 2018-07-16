@@ -12,7 +12,7 @@ page {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: url('http://bolaa.wauwo.net/WXimages/c4.png');
+  background: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/c4.png');
   background-size: 100% 100%;
 }
 
@@ -31,7 +31,7 @@ swiper-item view {
   top: 32rpx;
   width: 128rpx;
   height: 80rpx;
-  background-image: url('http://bolaa.wauwo.net/WXimages/a6.png');
+  background-image: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/a6.png');
   background-size: 100% 100%;
 }
 
@@ -39,12 +39,13 @@ swiper-item view {
   position: absolute;
   right: 46rpx;
   top: 76rpx;
-  width: 92rpx;
-  height: 30rpx;
+  width: auto;
+  height: 36rpx;
   border-bottom: 1px solid #fff;
   color: #fff;
-  font-size: 22rpx;
+  font-size: 26rpx;
   text-align: center;
+  font-weight: 600;
   z-index: 9999;
 }
 
@@ -74,10 +75,9 @@ swiper-item view {
 .boxF {
   position: absolute;
   top: 120rpx;
-  left: 82rpx;
+  left: 96rpx;
   transform: rotate(120deg);
   float: left;
-  margin-left: 10px;
   -ms-transform: rotate(120deg);
   -moz-transform: rotate(120deg);
   -webkit-transform: rotate(120deg);
@@ -100,7 +100,7 @@ swiper-item view {
   background-color: #fff;
   background-size: 100% 100%;
   white-space: nowrap;
-  width: 540rpx;
+  width: 554rpx;
 }
 
 .boxFF, .boxSS, .boxTT, .overlay {
@@ -111,8 +111,8 @@ swiper-item view {
 
 .boxFF {
   position: absolute;
-  top: 8rpx;
-  left: -10rpx;
+  top: 0;
+  left: -2rpx;
   transform: rotate(120deg);
   float: left;
   margin-left: 10px;
@@ -142,7 +142,7 @@ swiper-item view {
 
 .change {
   float: left;
-  width: 540rpx;
+  width: 560rpx;
   height: auto;
   text-align: center;
 }
@@ -152,19 +152,65 @@ swiper-item view {
   display: flex;
   flex-direction: column;
   margin-top: 160rpx;
-  font-size: 68rpx;
-  /*  background: -webkit-linear-gradient(to right, #3e0f98, #d63e4b); 
-  background: -o-linear-gradient(to right, #3e0f98, #d63e4b); 
-  background: -moz-linear-gradient(to right, #3e0f98, #d63e4b); 
-  background: linear-gradient(to right, #3e0f98, #d63e4b); 
-  -webkit-background-clip: text;
-  -o-background-clip: text;
-  -moz--background-clip: text;
-  background-clip: text; 
-  color: transparent;*/
-  color: #d63e4b;
+  font-size: 60rpx;
+  color: #47109f;
   font-weight: 600;
   text-align: center;
+}
+
+.title {
+  margin-top: 160rpx;
+  margin-left: 4rpx;
+}
+
+.Lo, .Lt, .Ro, .Rt {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.Lo {
+  margin-top: 40rpx;
+}
+
+.choose {
+  position: absolute;
+  bottom: 140rpx;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.LeftC {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin-left: 80rpx;
+}
+
+.LCo, .LCt, .RCo, .RCt {
+  border: 1px solid #fff;
+  border-radius: 29rpx;
+  width: 209rpx;
+  height: 59rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 59rpx;
+  margin-top: 50rpx;
+  background-color: #f39801;
+}
+
+.RightC {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-right: 80rpx;
 }
 
 .Interpreter, .judge {
