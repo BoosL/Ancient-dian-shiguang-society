@@ -146,7 +146,7 @@ page {
   color: #666;
 }
 
-.lButton, .rButton, .runBtn {
+.lButton, .rButton{
   position: absolute;
   bottom: 214rpx;
   color: #fff;
@@ -167,9 +167,6 @@ page {
   right: 80rpx;
 }
 
-.runBtn {
-  left: 269rpx;
-}
 
 .item {
   font-size: 22rpx;

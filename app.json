@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/coupons/coupons",
+    "pages/clock/clock",
     "pages/calendar/calendar",
     "pages/sonic/sonic",
-    "pages/clock/clock",
+    "pages/coupons/coupons",
     "pages/puzzle/puzzle",
     "pages/indexs/indexs",
     "pages/logs/logs"

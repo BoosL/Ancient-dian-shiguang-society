@@ -22,7 +22,7 @@
             </view>
           </view>
         </view>
-        <view class='choose' wx-if="{{hidden}}" wx:for="{{single}}" wx:key="{{singleword}}">
+        <view class='choose' wx-if="{{hidden}}" wx:for="{{single}}" wx:key="{{single}}">
           <view class='LeftC'>
             <text class='LCo' data-id='{{item.options[0].temp}}' bindtap='Choose'>A</text>
             <text class='LCt' data-id='{{item.options[2].temp}}' bindtap='Choose'>C</text>

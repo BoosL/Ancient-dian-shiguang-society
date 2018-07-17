@@ -191,14 +191,13 @@ Page({
 
   //单词选项
   Choose: function(e) {
-    console.log(e.currentTarget.dataset.id)
     var that = this;
     var lengthes = wx.getStorageSync('lengthes');
     var bgColora = this.data.pageBackgroundColor == 'red' ? 'red' : 'red';
-    var thisId = e.target.id;
-    /* console.log(thisId) */
+    var thisId = e.currentTarget.dataset.id;
     var isTrue = that.getWord[this.data.showNum].options[thisId]
-    if (isTrue == 3) {
+    console.log(isTrue)
+    if (isTrue.temp == 3) {
       var that = this;
       var lengthes = wx.getStorageSync('lengthes');
       if (this.data.showNum >= lengthes - 1) {
@@ -215,12 +214,21 @@ Page({
         marginLeft: that.data.marginLeft,
       })
     } else {
-      if (thisId === 0) {
-
-      } else if (thisId === 1) {
-
-      } else if (thisId === 2) {
-
+      if (isTrue.temp === 0) {
+        wx.showToast({
+          title: '答案错误',
+          duration: 1500
+        })
+      } else if (isTrue.temp === 1) {
+        wx.showToast({
+          title: '答案错误',
+          duration: 1500
+        })
+      } else if (isTrue.temp === 2) {
+        wx.showToast({
+          title: '答案错误',
+          duration: 1500
+        })
       } else if (thisId === 3) {
 
       }
@@ -273,7 +281,7 @@ Page({
   //上传图片确认打卡
   ImgConfirmTheClock: function(res) {
     var that = this;
-   console.log(that)
+    console.log(that.data)
     if (that.data.results.length > 5) {
       var results = wx.getStorageSync('results');
       wx.request({
@@ -459,11 +467,11 @@ Page({
         var ArrList = words.data.result;
         var getArray = (getArrayItems(ArrList, ArrList.length));
         that.getWord = getArray
-        /* for (var i in getArray) {
-          for (var j = 0; j < getArray[i].options.length; j++) {
-            getArray[i].options[j].temp = j
-          }
-        } */
+        /*  for (var i in getArray) {
+           for (var j = 0; j < getArray[i].options.length; j++) {
+             getArray[i].options[j].temp = j
+           }
+         } */
         console.log(getArray)
         that.setData({
           single: getArray,

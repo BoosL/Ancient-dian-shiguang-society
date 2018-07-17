@@ -31,7 +31,6 @@ Page({
         sessionId: session_code,
       },
       success: function(data) {
-        console.log(data.data)
         var array = []
         for (var i = 0; i < 3; i++) {
           if (i < data.data.result) {

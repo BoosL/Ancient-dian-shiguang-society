@@ -30,9 +30,7 @@ Page({
     done: true,
     sing: false,
 
-    calendar: '',
 
-    isPunch: '',
   },
 
 
@@ -54,9 +52,8 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function(e) {
     var that = this;
-    var bgColor = this.data.pageBackgroundColor == 'red' ? '#5cb85c' : '#db4a6b';
     wx.request({
       url: 'https://gz.wauwo.net/miniAPP/calendar/getPunchDetails',
       header: {
@@ -65,9 +62,9 @@ Page({
       method: "POST",
       data: {
         sessionId: session_code,
+        /* time: yyyy-MM */
       },
       success: function(datas) {
-        console.log(datas.data.result)
         var myDate = new Date();
         that.setData({
           calendar: datas.data.result,
@@ -75,21 +72,24 @@ Page({
           Month: myDate.getMonth() + 1,
           day: myDate.getDate(),
         })
-        for (var i in datas.data.result) {
-          var isPunch = datas.data.result[i].isPunch;
-          var isToday = datas.data.result[i].isToday;
-          if (isPunch == 1) {
-            that.setData({
-              done: false,
-              sing: true,
-              images: 'url(http://gz.wauwo.net/miniAPP/resources/tempImage/draw.png)',
-            })
-          }
-          if (isToday == 1) {
-            that.setData({
-              color: bgColor
-            })
-          }
+      },
+    });
+
+    wx.request({
+      url: 'https://gz.wauwo.net/miniAPP/calendar/todayIsCalendarPunch',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "POST",
+      data: {
+        sessionId: session_code,
+      },
+      success: function(data) {
+        if (data.data.result == 1) {
+          that.setData({
+            done: false,
+            sing: true,
+          })
         }
       },
     });

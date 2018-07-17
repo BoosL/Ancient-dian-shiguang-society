@@ -9,8 +9,8 @@
       </block>
     </view>
     <view class='calendarlist'>
-      <block wx:for="{{calendar}}" wx:key="{{calendar}}" >
-        <text class='listday' style='color:{{color}};background-image: {{images}};'>{{item.day}}</text>
+      <block wx:for="{{calendar}}" wx:key="{{calendar}}">
+        <text class='listday' style='color:{{item.fontColor}};background-image: url({{item.drawUrl}});'>{{item.day}}</text>
       </block>
     </view>
   </view>
