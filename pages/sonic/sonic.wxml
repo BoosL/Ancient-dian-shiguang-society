@@ -1,12 +1,12 @@
 <import src="../footer-template/footer-template.wxml" />
 <!-- 引用模块标签 -->
 <view class='container'>
+  <image class='banck' src='../images/b1.png'></image>
   <text class='rule' bindtap="show">活动规则</text>
   <view class='log'></view>
   <view class="boxF">
     <view class="boxS">
       <view class="boxT">
-        <!--通过数据绑定的方式动态获取js数据-->
         <view class="boxFF">
           <view class="boxSS">
             <image class="boxTT" src="{{source}}" mode="aspecFill">
@@ -25,5 +25,5 @@
   <text class='lButton' bindtap="listenerButtonChooseImage">上传图片</text>
   <text class='rButton' bindtap="ImgConfirmTheClock">确认打卡</text>
   <text class='item' decode="{{true}}">今日坚持事项：&nbsp;&nbsp; 跑步</text>
+  <template is="postItem" />
 </view>
-<template is="postItem" />

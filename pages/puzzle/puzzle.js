@@ -23,6 +23,8 @@ Page({
     hiddens: true,
     shows: false,
 
+    imgurl:""
+
   },
 
   /*** 滑动切换tab***/
@@ -57,7 +59,7 @@ Page({
     var session_code = wx.getStorageSync('session_code');
     //单词打卡拼图
     wx.request({
-      url: 'https://gz.wauwo.net/miniAPP/punchCard/getPunchInfoCardByType',
+      url: 'https://gz.wauwo.net/miniAPP/punchCard/getPunchInfoCardByType?d=' + Date.now(),
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -97,7 +99,7 @@ Page({
 
     //上传美图拼图
     wx.request({
-      url: 'https://gz.wauwo.net/miniAPP/punchCard/getPunchInfoCardByType',
+      url: 'https://gz.wauwo.net/miniAPP/punchCard/getPunchInfoCardByType?d=' + Date.now(),
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -124,7 +126,7 @@ Page({
           that.setData({
             hiddeni: false,
             showi: true,
-            bgimagbb: 'url(http://gz.wauwo.net/miniAPP/resources/tempImage/pintu.png)',
+            bgimagbb: 'url(http://gz.wauwo.net/miniAPP/resources/tempImage/pintu.png)?d=' + Date.now(),
           })
         }
 
@@ -139,7 +141,7 @@ Page({
 
     //步数打卡拼图
     wx.request({
-      url: 'https://gz.wauwo.net/miniAPP/punchCard/getPunchInfoCardByType',
+      url: 'https://gz.wauwo.net/miniAPP/punchCard/getPunchInfoCardByType?d=' + Date.now(),
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -177,7 +179,27 @@ Page({
       },
     });
 
+    
 
+
+    wx.request({
+      url: 'https://gz.wauwo.net/miniAPP/image/getImageBase64 ?d = ' + Date.now(),
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "POST",
+      data: {
+        name: "c4"
+      },
+      success: function (data) {
+        var array = wx.base64ToArrayBuffer(data.data[0].context);
+        var base64 = wx.arrayBufferToBase64(array);
+        //将转后的信息赋值给image的src 
+        that.setData({
+          imgurl: "data:image/png;base64," + base64
+        });
+      },
+    });
 
 
 

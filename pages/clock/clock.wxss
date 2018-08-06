@@ -12,7 +12,12 @@ page {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/c4.png');
+}
+
+.banck {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-size: 100% 100%;
 }
 
@@ -178,13 +183,18 @@ swiper-item view {
   margin-top: 40rpx;
 }
 
-.choose {
+.oo {
   position: absolute;
-  bottom: 140rpx;
-  width: 100%;
-  height: auto;
+  bottom: 150rpx;
   color: #fff;
   font-size: 30rpx;
+}
+
+.choose {
+  float: left;
+  width: 750rpx;
+  height: auto;
+  text-align: center;
 }
 
 .LeftC {

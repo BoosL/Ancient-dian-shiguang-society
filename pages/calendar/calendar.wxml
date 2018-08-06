@@ -1,7 +1,7 @@
 <view class="CA-content">
   <view class='calendar'>
     <image class='Cbanner' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c1.png'></image>
-    <text class='month'>{{Month}}月<text class='day'>{{day}}日</text></text>
+    <text class='month'>{{month}}月<text class='day'>{{day}}日</text></text>
     <text class='rule' bindtap="show">活动规则</text>
     <view class='weekB'>
       <block wx:for="{{array}}" wx:key="{{array}}">
@@ -10,14 +10,14 @@
     </view>
     <view class='calendarlist'>
       <block wx:for="{{calendar}}" wx:key="{{calendar}}">
-        <text class='listday' style='color:{{item.fontColor}};background-image: url({{item.drawUrl}});'>{{item.day}}</text>
+        <text class='listday' style='background-color:{{item.fontColor}};background-image: url({{item.drawUrl}});'>{{item.day}}</text>
       </block>
     </view>
   </view>
   <view class='items'>
     <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c3.png'></image>
     <text class='itemss' decode="{{true}}">挑战日历</text>
-    <text class='time'>{{Year}}年{{Month}}月{{day}}日</text>
+    <text class='time'>{{year}}年{{month}}月{{day}}日</text>
     <text class='convert' wx-if="{{done}}" bindtap="onDoneTap">去完成</text>
     <text class='sign' wx-if="{{sing}}">已完成</text>
   </view>

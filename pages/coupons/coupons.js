@@ -5,24 +5,18 @@ Page({
    */
   data: {
     list: [],
+    imgurl:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
     var that = this;
     var session_code = wx.getStorageSync('session_code');
     //单词打卡拼图
     wx.request({
-      url: 'https://gz.wauwo.net/miniAPP/lottery/countLottery',
+      url: 'https://gz.wauwo.net/miniAPP/lottery/countLottery?d=' + Date.now(),
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -49,6 +43,33 @@ Page({
         })
       },
     });
+
+
+    wx.request({
+      url: 'https://gz.wauwo.net/miniAPP/image/getImageBase64 ?d = ' + Date.now(),
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "POST",
+      data: {
+        name: "c4"
+      },
+      success: function(data) {
+        var array = wx.base64ToArrayBuffer(data.data[0].context);
+        var base64 = wx.arrayBufferToBase64(array);
+        //将转后的信息赋值给image的src 
+        that.setData({
+          imgurl: "data:image/png;base64," + base64
+        });
+      },
+    });
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function() {
+
   },
 
   /**

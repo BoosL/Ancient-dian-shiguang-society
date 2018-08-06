@@ -1,4 +1,5 @@
 <view class="CA-content">
+<image class='banck' src='../images/b1.png'></image>
   <image class='logs' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a6.png'></image>
   <text class='rule' bindtap="show">活动规则</text>
   <swiper current="{{currentTab}}" class="swiper-box" bindchange="bindChange">

@@ -3,7 +3,7 @@ Page{
 index      ShouYe
 
 
-clock      QuweiDaka
+clock      QuWeiDaKa
 
 
 sonic      TiaoZhanRiLi 2
@@ -12,10 +12,10 @@ sonic      TiaoZhanRiLi 2
 calendar   TiaoZhanRiLi 
 
 
-coupons    WoDeChashanjuan
+coupons    TiaoZhanRiLiLiPinJuan
 
    
-puzzle     WodePingtu
+puzzle     QuWeiDaKaLiPinJuan
 
 
 footer-template DibuTemplate

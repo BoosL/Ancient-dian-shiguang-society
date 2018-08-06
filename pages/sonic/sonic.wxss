@@ -1,18 +1,27 @@
 @import "../footer-template/footer-template.wxss";
 
 page {
+  width: 100%;
   height: 100%;
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  position: relative;
-  background-image: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/b1.png');
   background-size: 100% 100%;
 }
+
+.banck {
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 1300rpx;
+  background-size: 100% 100%;
+}
+
 
 .rule {
   position: absolute;
@@ -44,13 +53,12 @@ page {
   overflow: hidden;
 }
 
-.boxF {
-  position: absolute;
+ .boxF {
+  position: relative;
   top: 120rpx;
-  left: 82rpx;
+  left: 92rpx;
   transform: rotate(120deg);
   float: left;
-  margin-left: 10px;
   -ms-transform: rotate(120deg);
   -moz-transform: rotate(120deg);
   -webkit-transform: rotate(120deg);
@@ -146,7 +154,7 @@ page {
   color: #666;
 }
 
-.lButton, .rButton{
+.lButton, .rButton {
   position: absolute;
   bottom: 214rpx;
   color: #fff;
@@ -166,7 +174,6 @@ page {
 .rButton {
   right: 80rpx;
 }
-
 
 .item {
   font-size: 22rpx;

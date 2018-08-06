@@ -1,4 +1,3 @@
-var session_code = wx.getStorageSync('session_code');
 Page({
 
   /**
@@ -30,7 +29,8 @@ Page({
     done: true,
     sing: false,
 
-
+    interval: 2000,
+    duration: 500,
   },
 
 
@@ -49,34 +49,42 @@ Page({
   },
 
 
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(e) {
     var that = this;
+    var myDate = new Date();
+    var year = myDate.getFullYear();
+    var month = myDate.getMonth() + 1;
+    var day = myDate.getDate();
+    var session_code = wx.getStorageSync('session_code');
+    //当月
     wx.request({
-      url: 'https://gz.wauwo.net/miniAPP/calendar/getPunchDetails',
+      url: 'https://gz.wauwo.net/miniAPP/calendar/getPunchDetails?d=' + Date.now(),
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       method: "POST",
       data: {
         sessionId: session_code,
-        /* time: yyyy-MM */
       },
       success: function(datas) {
-        var myDate = new Date();
         that.setData({
           calendar: datas.data.result,
-          Year: myDate.getFullYear(),
-          Month: myDate.getMonth() + 1,
-          day: myDate.getDate(),
+          year: year,
+          month: month,
+          day: day,
         })
       },
     });
 
+
     wx.request({
-      url: 'https://gz.wauwo.net/miniAPP/calendar/todayIsCalendarPunch',
+      url: 'https://gz.wauwo.net/miniAPP/calendar/todayIsCalendarPunch?d=' + Date.now(),
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },

@@ -1,6 +1,7 @@
 <import src="../footer-template/footer-template.wxml" />
 <!-- 引用模块标签 -->
 <view class='container'>
+  <image class='banck' src='../images/b1.png'></image>
   <text class='rule' bindtap="show">活动规则</text>
   <view class='log'></view>
   <swiper current="{{currentTab}}" duration="500" bindchange="swiperTab" class="swiper-box">
@@ -22,14 +23,16 @@
             </view>
           </view>
         </view>
-        <view class='choose' wx-if="{{hidden}}" wx:for="{{single}}" wx:key="{{single}}">
-          <view class='LeftC'>
-            <text class='LCo' data-id='{{item.options[0].temp}}' bindtap='Choose'>A</text>
-            <text class='LCt' data-id='{{item.options[2].temp}}' bindtap='Choose'>C</text>
-          </view>
-          <view class='RightC'>
-            <text class='RCo' data-id='{{item.options[1].temp}}' bindtap='Choose'>B</text>
-            <text class='RCt' data-id='{{item.options[3].temp}}' bindtap='Choose'>D</text>
+        <view wx-if="{{hidden}}" class='oo' style='width:{{widths}}rpx; height:200rpx; margin-left:{{marginLefts}}rpx;'>
+          <view class='choose' wx:for="{{single}}" wx:key="{{single}}">
+            <view class='LeftC'>
+              <text class='LCo' data-id='{{item.options[0].temp}}' bindtap='Choose'>A</text>
+              <text class='LCt' data-id='{{item.options[2].temp}}' bindtap='Choose'>C</text>
+            </view>
+            <view class='RightC'>
+              <text class='RCo' data-id='{{item.options[1].temp}}' bindtap='Choose'>B</text>
+              <text class='RCt' data-id='{{item.options[3].temp}}' bindtap='Choose'>D</text>
+            </view>
           </view>
         </view>
         <text class='runBtn' bindtap="workclock" wx-if="{{shows}}">确认打卡</text>

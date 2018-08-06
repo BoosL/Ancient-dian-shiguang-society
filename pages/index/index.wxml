@@ -5,8 +5,8 @@
   加载中...
 </loading>
 <view class="content" wx-if="{{hidden}}">
-  <image class='cbanner' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c4.png'></image>
-  <image class='four' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a.png'></image>
+  <image class='cbanner' src='../images/b1.png'></image>
+  <image class='four' src='../images/a.png'></image>
   <text class='rule' bindtap="show">活动规则</text>
   <image animation="{{animationData}}" bindtap="onPostTap" class='punch-card' src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a2.png'></image>
   <image animation="{{animationDataone}}" class='CY' bindtap="onPostsTap" src='http://gz.wauwo.net/miniAPP/resources/img/weixin/a3.png'></image>

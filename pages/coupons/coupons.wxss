@@ -106,6 +106,8 @@ page {
   -ms-transform: rotate(120deg);
   -moz-transform: rotate(120deg);
   -webkit-transform: rotate(120deg);
+  background-image: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/d1.png');
+  background-size: 100% 100%;
 }
 
 .boxSS {
@@ -122,9 +124,6 @@ page {
   -moz-transform: rotate(-60deg);
   -webkit-transform: rotate(-60deg);
   visibility: visible;
-  background-image: url('http://gz.wauwo.net/miniAPP/resources/img/weixin/d1.png');
-  background-size: 100% 100%;
-  position: relative;
 }
 
 .PPF {
@@ -133,18 +132,29 @@ page {
   top: 50%;
   transform: translate(0, -50%);
   height: 308rpx;
-  width: 100%;
+  width: 540rpx;
   border-top: 1rpx solid #ae43a6;
   border-bottom: 1rpx solid #ae43a6;
 }
 
 .PPF view {
-  width: 33.05%;
+  position: relative;
+  width: 179rpx;
   height: 100%;
   background: #fff;
   border-left: 1rpx solid #ae43a6;
   float: left;
   background-size: 100% 100%;
+}
+
+.PPF view .medal {
+  position: absolute;
+  top: 50%;
+  margin-top: -80rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 123rpx;
+  height: 160rpx;
 }
 
 .PPF view:nth-child(1) {

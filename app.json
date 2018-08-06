@@ -3,8 +3,8 @@
     "pages/index/index",
     "pages/clock/clock",
     "pages/calendar/calendar",
-    "pages/sonic/sonic",
     "pages/coupons/coupons",
+    "pages/sonic/sonic",
     "pages/puzzle/puzzle",
     "pages/indexs/indexs",
     "pages/logs/logs"

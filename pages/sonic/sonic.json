@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "挑战日历"
+  "navigationBarTitleText": "挑战日历",
+  "disableScroll": true
 }
