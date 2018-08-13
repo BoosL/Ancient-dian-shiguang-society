@@ -24,6 +24,6 @@
   </view>
   <text class='lButton' bindtap="listenerButtonChooseImage">上传图片</text>
   <text class='rButton' bindtap="ImgConfirmTheClock">确认打卡</text>
-  <text class='item' decode="{{true}}">今日坚持事项：&nbsp;&nbsp; 跑步</text>
+   <text class='item'>{{text}}</text>
   <template is="postItem" />
 </view>

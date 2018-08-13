@@ -2,12 +2,12 @@
 <!-- 引用模块标签 -->
 <view class='container'>
   <image class='banck' src='../images/b1.png'></image>
-  <text class='rule' bindtap="show">活动规则</text>
   <view class='log'></view>
   <swiper current="{{currentTab}}" duration="500" bindchange="swiperTab" class="swiper-box">
     <swiper-item>
       <view>
         <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png' class='Sixborder'></image>
+        <text class='rule' bindtap="show">活动规则</text>
         <view class="boxF">
           <view class="boxS">
             <view class="boxT">
@@ -41,6 +41,7 @@
     <swiper-item>
       <view>
         <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png' class='Sixborder'></image>
+        <text class='rule' bindtap="shows">活动规则</text>
         <view class="boxF">
           <view class="boxS">
             <view class="boxT">
@@ -67,6 +68,7 @@
     <swiper-item>
       <view>
         <image src='http://gz.wauwo.net/miniAPP/resources/img/weixin/c5.png' class='Sixborder'></image>
+        <text class='rule' bindtap="showss">活动规则</text>
         <view class="boxF">
           <view class="boxS">
             <view class="boxT">

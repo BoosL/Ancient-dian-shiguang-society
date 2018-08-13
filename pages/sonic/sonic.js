@@ -76,7 +76,7 @@ Page({
         success: function (data) {
           if (data.data.e == 0) {
             wx.navigateTo({
-              url: '../index/index'
+              url: '../calendar/calendar'
             })
           } else {
             wx.showModal({
@@ -99,6 +99,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    var session_code = wx.getStorageSync('session_code');
     wx.request({
       url: 'https://gz.wauwo.net/miniAPP/image/getImageBase64 ?d = ' + Date.now(),
       header: {
@@ -114,6 +115,24 @@ Page({
         that.setData({
           imgurl: "data:image/png;base64," + base64
         });
+      },
+    });
+
+
+    wx.request({
+      url: 'https://gz.wauwo.net/miniAPP/health/getContent?d = ' + Date.now(),
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "POST",
+      data: {
+        sessionId: session_code,
+      },
+      success: function (data) {
+        var text = data.data;
+        that.setData({
+          text: text
+        })
       },
     });
   },
